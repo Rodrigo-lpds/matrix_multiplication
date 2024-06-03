@@ -1,4 +1,4 @@
-# Description: Matrix multiplication
+# execute to run: python3 matrix_multiplication.py
 
 from decimal import Decimal
 import timeit

@@ -1,3 +1,5 @@
+// execute to run: gcc -mavx -o matrix_multiplication_avx matrix_multiplication_avx.c
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

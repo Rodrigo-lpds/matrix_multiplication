@@ -1,3 +1,6 @@
+// execute to run: gcc -o matrix_multiplication matrix_multiplication.c
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
