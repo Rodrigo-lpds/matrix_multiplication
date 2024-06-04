@@ -30,7 +30,7 @@ def build(n_lines, n_cols):
 P = []
 Q = []
 
-q = 512 #Valores : 32, 64, 128, 256, 512
+q = 2048 #Values: 128, 256, 512, 1024, 2048
 
 P = build(q, q)
 Q = build(q, q)

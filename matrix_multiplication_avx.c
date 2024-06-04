@@ -1,11 +1,14 @@
-// execute to run: gcc -mavx -o matrix_multiplication_avx matrix_multiplication_avx.c
+/**
+    execute to run:
+    gcc -mavx -o matrix_multiplication_avx matrix_multiplication_avx.c && ./matrix_multiplication_avx
+**/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <x86intrin.h>
 
-#define MATRIX_SIZE 512 // Valores : 32, 64, 128, 256, 512
+#define MATRIX_SIZE 2048 // Values: 128, 256, 512, 1024, 2048
 
 void dgemm(size_t n, double *A, double *B, double *C)
 {
@@ -47,8 +50,7 @@ int main()
     dgemm(MATRIX_SIZE, MatrizP, MatrizQ, MatrizM);
     time = clock() - time;
 
-    printf("O tempo de execução do programa é de: %0.6Lf segundos\n",
-           ((long double)time) / CLOCKS_PER_SEC);
+    printf("O tempo de execução do programa para uma matrix %d x %d é de: %0.6Lf segundos\n", MATRIX_SIZE, MATRIX_SIZE, ((long double)time) / CLOCKS_PER_SEC);
 
     free(MatrizP);
     free(MatrizQ);
